@@ -14,9 +14,10 @@ This module provides the `money_rates_settings` object, that is used to access
 django-money-rates settings, checking for user settings first, then falling
 back to the defaults.
 """
+import importlib
 
 from django.conf import settings
-from django.utils import importlib, six
+from django.utils import six
 
 
 USER_SETTINGS = getattr(settings, 'DJANGO_MONEY_RATES', None)
